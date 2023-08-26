@@ -1,177 +1,252 @@
 :root {
-    --blueshade1:rgba(228,241,246,1);
-    --blueshade2:rgba(103,175,203,1);
-    --blueshade3:rgba(52,123,152,1);
-    --blueshade4:rgba(26,62,76,1);
-    --blueshade5:rgba(9,40,52,1);
-    --white:rgba(255,255,255,1);
-    --sun1:rgba(247, 100, 20, 1);
-    --sun2:rgba(224, 138, 9, 1);
-    --sun3:rgba(247, 100, 20, 1);
-    --fontweight:700;
-
+	--blueshade1: rgba(228, 241, 246, 1);
+	--blueshade2: rgba(103, 175, 203, 1);
+	--blueshade3: rgba(52, 123, 152, 1);
+	--blueshade4: rgba(26, 62, 76, 1);
+	--blueshade5: rgba(9, 40, 52, 1);
+	--white: rgba(255, 255, 255, 1);
+	--sun1: rgba(247, 100, 20, 1);
+	--sun2: rgba(224, 138, 9, 1);
+	--sun3: rgba(247, 100, 20, 1);
+	--fontweight: 700;
 }
+hr {
+	border-top: 2px dashed var(--blueshade2);
+	height: 1px;
+	background-color: var(--blueshade3)
+}
+.list {
+	list-style-position: inside
+}
+table {
+	border: 1px solid var(--blueshade3)
+}
+th {
+	background-color: var(--blueshade4);
+	color: var(--white);
+	font-weight: bold
+}
+tr:nth-child(even) {
+	background-color: var(--blueshade1)
+}
+td {
+	padding: 5px
+}
+body {
+	font-family: 'Lato', sans-serif;
+	background: var(--blueshade1);
+	width: var(--full);
+	height: var(--full);
+	display: flex;
+	flex-direction: column;
+	text-align: center
+	/*Sets the font size to 16px */
+}
+/*Sets the line height to 1.7*/
 
-
-
-hr{border-top:2px dashed var(--blueshade2);
-    height:1px;
-    background-color:var(--blueshade3)}
-.list {list-style-position:inside}
-table {border:1px solid var(--blueshade3)}
-th {background-color: var(--blueshade4);
-    color:var(--white);
-    font-weight:bold}
-tr:nth-child(even) {background-color:var(--blueshade1)}
-td {padding:5px}
-
-
-body{font-family:'Lato',sans-serif;
-    background:var(--blueshade1);
-    width:var(--full);
-    height:var(--full);
-    display:flex;
-    flex-direction:column;
-    text-align:center
-    
-    /*Sets the font size to 16px */
-    }
-    /*Sets the line height to 1.7*/
-    
 /* Path: css\styles.css */
-h1 {font-size:30px;font-weight:var(--fontweight)}
-h2 {font-size:24px;font-weight:var(--fontweight)}
-h3 {font-size:18px;font-weight:var(--fontweight)}
 
-input,texture,select,button{font-family:system-ui}
-
-a{color:var(--blueshade4);text-decoration:none}
-a:hover,a:focus{color:var(--blueshade4);text-decoration:none} 
-a:visited{color:var(--blueshade4);text-decoration:none}   
-a:active{color:var(--blueshade4);text-decoration:none}    
-button{
-    /*overwrites browser defaults and resets the border*/
-    border:none;
-    /*takes the font from the outer container*/
-    display:inline-block;
-    /*takes the font from the outer container*/
-    font-family:inherit;
-    /*styles the background color, font color, and text decoration (underline, etc.) of the button*/
-    background-color:var(--blueshade4);
-    color:var(--white);
-    text-decoration:none;
-    /*adds spacing to the button(this will be discussed more in-depth later)*/
-    padding:10px;
-    border-radius:3px;
-    /*gives the button a bottom border with a width of 2px, a type of solid, and a color*/
-    border-bottom:2px solid var(--blueshade3);
-    transition:0.2s ease-in-out
-    
+h1 {
+	font-size: 30px;
+	font-weight: var(--fontweight)
 }
-
-button:hover, button:focus{
-    /*changes the background color of the button when the user hovers over it*/
-    background-color:var(--blueshade3);
-    /*changes the color of the button text when the user hovers over it*/
-    color:var(--white);
-    /*changes the color of the bottom border when the user hovers over it*/
-    border-bottom:2px solid var(--blueshade3);
-    /*changes the cursor to a pointer when the user hovers over the button*/
-    cursor:pointer;
-    opacity:0.8
-} 
-.button__secondary {background-color:var(--blueshade3);
-    color:var(--white);
-    border-bottom:2px solid #1A3E4C;
-a :color var(--blueshade3)} 
-
-.profile__portrait {float:left;
-    width:250px;
-    margin-right:60px;
-    border-radius:50%}
-.profile{max-width:700px;
-    margin:0 auto}
-
-*{box-sizing: border-box}
-
-.page-header {display:flex;width:100%;padding:20px}
-.page-header__item{flex:0 1 200px}
-.page-header__item:last-child{flex-grow:1;text-align:right}
-
-.navigation-list{list-style-type:none}
-.navigation-list li {display:inline-block;margin-left:15px}
-.navigation-list__item--active{text-decoration:none}
-
-
-
-.grid-item {display:inline-block;
-    width:100%;
-    margin-bottom:20px;
-    padding:100px}
-
-.grid-container{display:grid;
-    grid-template-columns:1fr 1fr 1fr;
-    grid-template-rows:300px 300px;
-    grid-gap:20px}
-
+h2 {
+	font-size: 24px;
+	font-weight: var(--fontweight)
+}
+h3 {
+	font-size: 18px;
+	font-weight: var(--fontweight)
+}
+input, texture, select, button {
+	font-family: system-ui
+}
+a {
+	color: var(--blueshade4);
+	text-decoration: none
+}
+a:hover, a:focus {
+	color: var(--blueshade4);
+	text-decoration: none
+}
+a:visited {
+	color: var(--blueshade4);
+	text-decoration: none
+}
+a:active {
+	color: var(--blueshade4);
+	text-decoration: none
+}
+button {
+	/*overwrites browser defaults and resets the border*/
+	border: none;
+	/*takes the font from the outer container*/
+	display: inline-block;
+	/*takes the font from the outer container*/
+	font-family: inherit;
+	/*styles the background color, font color, and text decoration (underline, etc.) of the button*/
+	background-color: var(--blueshade4);
+	color: var(--white);
+	text-decoration: none;
+	/*adds spacing to the button(this will be discussed more in-depth later)*/
+	padding: 10px;
+	border-radius: 3px;
+	/*gives the button a bottom border with a width of 2px, a type of solid, and a color*/
+	border-bottom: 2px solid var(--blueshade3);
+	transition: 0.2s ease-in-out
+}
+button:hover, button:focus {
+	/*changes the background color of the button when the user hovers over it*/
+	background-color: var(--blueshade3);
+	/*changes the color of the button text when the user hovers over it*/
+	color: var(--white);
+	/*changes the color of the bottom border when the user hovers over it*/
+	border-bottom: 2px solid var(--blueshade3);
+	/*changes the cursor to a pointer when the user hovers over the button*/
+	cursor: pointer;
+	opacity: 0.8
+}
+.button__secondary {
+	background-color: var(--blueshade3);
+	color: var(--white);
+	border-bottom: 2px solid #1A3E4C;
+}
+.profile__portrait {
+	float: left;
+	width: 250px;
+	margin-right: 60px;
+	border-radius: 50%
+}
+.profile {
+	max-width: 700px;
+	margin: 0 auto
+}
+* {
+	box-sizing: border-box
+}
+.page-header {
+	display: flex;
+	width: 100%;
+	padding: 20px
+}
+.page-header__item {
+	flex: 0 1 200px
+}
+.page-header__item:last-child {
+	flex-grow: 1;
+	text-align: right
+}
+.navigation-list {
+	list-style-type: none
+}
+.navigation-list li {
+	display: inline-block;
+	margin-left: 15px
+}
+.navigation-list__item--active {
+	text-decoration: none
+}
+.grid-item {
+	display: inline-block;
+	width: 100%;
+	margin-bottom: 20px;
+	padding: 100px
+}
+.grid-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 300px 300px;
+	grid-gap: 20px
+}
 /*end grid fallback*/
-@supports (display:grid){
-    .grid-container
-    /*grid-template-columns:30 0px 300px 300px; fractions are better than pixels-they are responsive*/
-    grid-template-columns:fr fr fr
-    
-    .grid-item{background-color: var(--lightblue);
-        width:auto;
-        min-height:75%};
-    .grid-item:last child {grid-column:3/3;
-        grid-row:1/3}
 
+@supports (display:grid) {
+	.grid-container
+	/*grid-template-columns:30 0px 300px 300px; fractions are better than pixels-they are responsive*/
+	grid-template-columns:fr fr fr .grid-item {
+		background-color: var(--lightblue);
+		width: auto;
+		min-height: 75%
+	}
+	;
+	.grid-item:last child {
+		grid-column: 3/3;
+		grid-row: 1/3
+	}
 }
-
-
-.footer-container{clear:both;
-    width:100%;
-flex-direction:row;
-justify-content:center}
-
-
-@keyframes color-change{0%{fill:var(--sun1);
-}50%{fill:var(sun2)};
-100%{fill:var(--sun3)}}
-
-.sun {animation-duration:4s;
-    animation-name:color-change;
-    animation-iteration-count:infinite;
-    animation-direction:alternate;
-    animation-timing-function:linear;}
-
-@keyframes cloud-move{from{transform:translate(0,50px);} 
-to {transform:translate(200px, 50px);}
+.footer-container {
+	clear: both;
+	width: 100%;
+	flex-direction: row;
+	justify-content: center
 }
-
-.cloud-front {animation-duration:30s;animation-name:cloud-move;
-    animation-iteration-count:infinite;
-    animation-direction:alternate;
-    animation-timing-function:linear;}
-
-@keyframes cloud-move-reverse{from{transform:translate(446px, 48px);} 
-to {transform:translate(100px, 48px);}}
-
-.cloud-back {animation: 34s cloud-move-reverse infinite alternate linear;}
-
-@media all and (max-width:500px) and (max-width:750){
-    .grid-container{grid-template-columns:fr;
-        grid-gap:10px}
-    .grid-item:last-child{grid-column:auto/auto;
-        grid-row:auto/auto}
-    h1 {font-size:22px}
+@keyframes color-change {
+	0% {
+		fill: var(--sun1);
+	}
+	50% {
+		fill: var(sun2)
+	}
+	;
+	100% {
+		fill: var(--sun3)
+	}
 }
-
-
-@media all and (max-width:750px){
-    .grid-container{grid-template-columns:fr fr}
-    .grid__item:last-child{grid-column:auto/auto;grid-row:auto/auto}
-
+.sun {
+	animation-duration: 4s;
+	animation-name: color-change;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: linear;
 }
-
-@media all and (max-width:750px){/*shared code*/}
+@keyframes cloud-move {
+	from {
+		transform: translate(0, 50px);
+	}
+	to {
+		transform: translate(200px, 50px);
+	}
+}
+.cloud-front {
+	animation-duration: 30s;
+	animation-name: cloud-move;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: linear;
+}
+@keyframes cloud-move-reverse {
+	from {
+		transform: translate(446px, 48px);
+	}
+	to {
+		transform: translate(100px, 48px);
+	}
+}
+.cloud-back {
+	animation: 34s cloud-move-reverse infinite alternate linear;
+}
+@media all and (max-width:500px) and (max-width:750) {
+	.grid-container {
+		grid-template-columns: fr;
+		grid-gap: 10px
+	}
+	.grid-item:last-child {
+		grid-column: auto/auto;
+		grid-row: auto/auto
+	}
+	h1 {
+		font-size: 22px
+	}
+}
+@media all and (max-width:750px) {
+	.grid-container {
+		grid-template-columns: fr fr
+	}
+	.grid__item:last-child {
+		grid-column: auto/auto;
+		grid-row: auto/auto
+	}
+}
+@media all and (max-width:750px) {
+	/*shared code*/
+}
