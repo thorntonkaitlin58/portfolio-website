@@ -146,19 +146,6 @@ button:hover, button:focus {
 .navigation-list__item--active {
 	text-decoration: none
 }
-.grid-item {
-	display: inline-block;
-	width: 100%;
-	margin-bottom: 20px;
-	padding: 100px
-}
-.grid-container {
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 300px 300px;
-	grid-gap: 20px
-}
-/*end grid fallback*/
 
 
 .footer-container {
@@ -257,6 +244,22 @@ button:hover, button:focus {
 @media all and (max-width:500px) and (max-width:750px)
 {.grid-container{grid-template-columns:1fr 1fr;}}
 	/*shared code*/
+
+	.grid-item {
+		display: inline-block;
+		width: 100%;
+		margin-bottom: 20px;
+		padding: 100px
+	}
+	.grid-container {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 300px 300px;
+		grid-gap: 20px
+	}
+	/*end grid fallback*/
+	
+
 
 
 
