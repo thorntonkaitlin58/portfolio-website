@@ -30,8 +30,8 @@ td {
 body {
 	font-family: 'Lato', sans-serif;
 	background: rgba(228, 241, 246, 1);
-	width: undefined;
-	height: undefined;
+	width:100%;
+	height:100%;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -148,15 +148,13 @@ button:focus {
 	width: 100%;
 	padding: 20px
 }
-.page-header__item {
-	-webkit-box-flex: 0;
-	    -ms-flex: 0 1 200px;
-	        flex: 0 1 200px
-}
+
 .page-header__item:last-child {
 	-webkit-box-flex: 1;
 	    -ms-flex-positive: 1;
 	        flex-grow: 1;
+	-ms-flex:auto;
+	    flex:auto;
 	text-align: right
 }
 .navigation-list {
@@ -178,6 +176,7 @@ button:focus {
 .footer-container {
 	clear: both;
 	width: 100%;
+	height: 100%;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
 	    -ms-flex-direction: row;
@@ -185,6 +184,7 @@ button:focus {
 	-webkit-box-pack: center;
 	    -ms-flex-pack: center;
 	        justify-content: center;
+	padding: 100px;
 }
 @-webkit-keyframes color-change {
 	0% {
@@ -278,20 +278,22 @@ button:focus {
 	-webkit-animation: 34s cloud-move-reverse infinite alternate linear;
 	        animation: 34s cloud-move-reverse infinite alternate linear;
 }
-@media all and (max-width:500px) and (max-width:750) {
-	.grid-container {
-		-ms-grid-columns: fr;
-		grid-template-columns: fr;
-		grid-gap: 10px
-	}
-	.grid-item:last-child {
-		grid-column: auto/auto;
-		grid-row: auto/auto
-	}
-	h1 {
-		font-size: 22px
-	}
+
+
+p{
+	display:-webkit-box;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-box-orient:vertical;
+	-webkit-box-direction:normal;
+	    -ms-flex-direction:column;
+	        flex-direction:column;
+	padding:75px;
+	font-family: 'Lato', sans-serif;
+	font-size: 25px;
+	text-align: left;
 }
+
 
 
 @supports (display:grid) {
@@ -308,24 +310,25 @@ button:focus {
 		min-height: 0;
 		margin:auto
 	}
-	
-	.grid-item:last child {
-		-ms-grid-column: 3;
-		grid-column: 3/3;
-		-ms-grid-row: 1;
-		grid-row: 1/3
+	.grid-item:last-child {
+		grid-column: auto/auto;
+		grid-row: auto/auto
+	}}
+
+@media screen and (max-width:768px) 
+	{.grid-container{
+		-ms-grid-columns: 1fr;
+		grid-template-columns: 1fr;
+		grid-gap: 10px}
 	}
-}
 
-@media all and (max-width:750px) {
-	
-}
+@media screen and (max-width:1024px) 
+{.grid-container{-ms-grid-columns:1fr 10px 1fr;grid-template-columns:1fr 1fr;}
 
-@media all and (max-width:500px) 
-{.grid-container{-ms-grid-columns:1fr;grid-template-columns:1fr;}}
+}
 	
 @media all and (max-width:500px) and (max-width:750px)
-{.grid-container{-ms-grid-columns:1fr 20px 1fr;grid-template-columns:1fr 1fr;}}
+{.grid-container{-ms-grid-columns:1fr 10px 1fr;grid-template-columns:1fr 1fr;}}
 	/*shared code*/
 
 	.grid-item {
@@ -344,5 +347,8 @@ button:focus {
 		grid-gap: 20px
 	}
 	
+	/*end grid fallback*/
+	
+
 
 
