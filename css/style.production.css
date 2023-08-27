@@ -1,3 +1,4 @@
+
 /*
 * Prefixed by https://autoprefixer.github.io
 * PostCSS: v8.4.14,
@@ -130,7 +131,7 @@ button:focus {
 }
 .profile__portrait {
 	float: left;
-	width: 250px;
+	width: 30%;
 	border-radius: 100%;
 }
 .profile {
@@ -291,64 +292,40 @@ p{
 	padding:75px;
 	font-family: 'Lato', sans-serif;
 	font-size: 25px;
-	text-align: left;
-}
-
-
-
-@supports (display:grid) {
-	.grid-container
-	{display:-ms-grid;display:grid;
-	-ms-grid-columns: 1fr 20px 1fr 20px 1fr;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-gap: 20px
-	}
-	
-	.grid-item {
-		background-color: undefined;
-		width: auto;
-		min-height: 0;
-		margin:auto
-	}
-	.grid-item:last-child {
-		grid-column: auto/auto;
-		grid-row: auto/auto
-	}}
-
-@media screen and (max-width:768px) 
-	{.grid-container{
-		-ms-grid-columns: 1fr;
-		grid-template-columns: 1fr;
-		grid-gap: 10px}
-	}
-
-@media screen and (max-width:1024px) 
-{.grid-container{-ms-grid-columns:1fr 10px 1fr;grid-template-columns:1fr 1fr;}
 
 }
-	
-@media all and (max-width:500px) and (max-width:750px)
-{.grid-container{-ms-grid-columns:1fr 10px 1fr;grid-template-columns:1fr 1fr;}}
-	/*shared code*/
 
-	.grid-item {
-		display: inline-block;
-		width: 100%;
-		margin-bottom: 20px;
-		padding: 100px
-	}
+
+
+/* start grid fallback */
+.grid__item {
+	display: block;
+	width: 33%;
+   }
+   /* end grid fallback */
+   
+   @supports (display: grid) {
 	.grid-container {
-		display: -ms-grid;
-		display: grid;
-		-ms-grid-columns: 1fr 20px 1fr 20px 1fr;
-		grid-template-columns: 1fr 1fr 1fr;
-		-ms-grid-rows: 300px 20px 300px;
-		grid-template-rows: 300px 300px;
-		grid-gap: 20px
+	  display: -ms-grid;
+	  display: grid;
+	  /* grid-template-columns: 300px 300px 300px; fractions are better than pixels - they are responsive */
+	  -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+	  grid-template-columns: 1fr 1fr 1fr;
+	  grid-gap: 20px;
+	  margin: 0;
+   
 	}
-	
-	/*end grid fallback*/
-	
-
+	.grid__item {
+	  background-color: rgba(228, 241, 246, 1);
+	  width: auto;
+	  margin: 0;
+	}
+	.grid__item:last-child {
+	  -ms-grid-column: 3;
+	  grid-column: 3 / 3;
+	  -ms-grid-row: 1;
+	  grid-row: 1 / 3;
+	}
+   }
 
 
