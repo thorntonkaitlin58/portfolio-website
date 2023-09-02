@@ -1,10 +1,11 @@
-
 /*
 * Prefixed by https://autoprefixer.github.io
 * PostCSS: v8.4.14,
 * Autoprefixer: v10.4.7
 * Browsers: last 4 version
 */
+
+
 
 hr {
 	border-top: 2px dashed rgba(103, 175, 203, 1);
@@ -136,9 +137,11 @@ button:focus {
 	position:relative;
 }
 .profile {
-	max-width: 100%;
+	max-width: 90%;
 	margin: 0 auto;
 }
+
+
 * {
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box
@@ -150,6 +153,9 @@ button:focus {
 	width: 100%;
 	padding: 20px
 }
+.page-header nav {
+	margin-top: 40px;
+}
 
 .page-header__item:last-child {
 	-webkit-box-flex: 1;
@@ -160,7 +166,8 @@ button:focus {
 	text-align: right
 }
 .navigation-list {
-	list-style-type: none
+	list-style-type: none;
+	margin: 0;
 }
 .navigation-list li {
 	display: inline-block;
@@ -328,5 +335,3 @@ p{
 	  grid-row: 1 / 3;
 	}
    }
-
-
